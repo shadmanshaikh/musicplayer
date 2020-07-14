@@ -1,0 +1,5 @@
+git init
+git add -A
+git commit -m 'musicplayer'
+git remote add origin git@github.com:shady4real/simplemusicplayer.git
+git push -u -f origin master
