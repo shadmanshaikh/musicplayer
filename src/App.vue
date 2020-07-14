@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+
+  <br>
+    <div class="shadow p-3 mb-5 bg-white rounded text-dark">
+        <h2 class="text-light"> Thunder </h2>
+       <button class="btn btn-success btn-sm" @click.prevent="playSound('https://www.talk2trend.com/english/Imagine-Dragons-Thunder.mp3')">
+       <span class="fa fa-play-circle-o"></span>Play</button>
+      
+
+    </div>
+
+    <br>
+    <div class="shadow p-3 mb-5 bg-white rounded text-dark">
+        <h2 class="text-light"> See You Again </h2>
+       <button class="btn btn-success btn-sm" @click.prevent="playSound('https://www.talk2trend.com/english/see-you-again-ft-charlie-puth.mp3')">
+       <span class="fa fa-play-circle-o"></span>Play</button>
+      
+
+
+
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'app',
+  methods: {
+    
+    playSound (sound) {
+      if(sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    },
+    
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
